@@ -231,13 +231,15 @@ if modulo == "🛒 Punto de Venta (POS)":
 
             col_cant, col_btn = st.columns([1, 1.2])
             with col_cant:
-                cantidad = st.number_input(
-                    "Cantidad a vender",
-                    min_value=1,
-                    max_value=max(1, disponible_para_agregar) if disponible_para_agregar > 0 else 1,
-                    value=1,
-                    step=1
-                )
+                tipo_venta = st.radio("¿Vender por?", ["Cantidad / Peso", "Monto ($)"], horizontal=True)
+
+            if tipo_venta == "Cantidad / Peso":
+                cantidad = st.number_input("Cantidad/Peso (Ej: 0.250)", min_value=0.001, value=1.0, step=0.1, format="%.3f")
+            else:
+                monto = st.number_input("Monto en plata ($)", min_value=0.0, value=1000.0, step=100.0)
+                cantidad = monto / prod_info["precio_venta"] if prod_info["precio_venta"] > 0 else 0
+                st.info(f"⚖️ Equivale a {cantidad:.3f} unidades/kg")
+                
 
             with col_btn:
                 st.write("")
