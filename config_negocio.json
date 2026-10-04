@@ -1,0 +1,14 @@
+{
+    "nombre_negocio": "Comercio 001",
+    "titular_cuenta": "Juan Pedro Fasolla",
+    "banco": "Banco Cordóba",
+    "alias": "comercio.pagos",
+    "cbu": "0000003100012345678901",
+    "qr_imagen_path": "static/uploads/qr_pago_1791087792051.jpg",
+    "smtp_servidor": "smtp.gmail.com",
+    "smtp_puerto": 587,
+    "smtp_usuario": "",
+    "smtp_password": "",
+    "email_destinatario": "",
+    "admin_password": "admin123"
+}

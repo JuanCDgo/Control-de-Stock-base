@@ -1,0 +1,29 @@
+# Entornos virtuales de Python
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Base de datos local SQLite y archivos temporales WAL
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Archivos de registro y logs
+*.log
+.system_generated/
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Entornos de desarrollo
+.vscode/
+.idea/
