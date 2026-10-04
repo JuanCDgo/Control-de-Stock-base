@@ -196,7 +196,7 @@ if modulo == "🛒 Punto de Venta (POS)":
                 with col_foto:
                     img_abs = obtener_ruta_imagen_absoluta(prod_info.get("imagen_path"))
                     if img_abs:
-                        st.image(img_abs, caption=prod_info["nombre"], use_container_width=True)
+                        st.image(img_abs, caption=prod_info["nombre"], width=120)
                     else:
                         st.markdown(
                             """
